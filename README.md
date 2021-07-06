@@ -21,7 +21,7 @@
 | title      | string       | null: false                   |
 | catch_copy | text         | null: false                   |
 | concept    | text         | null: false                   |
-| image      |              |                               |
+| image      |              | presence: true                |
 | user       | references   | null: false,foreign_key: true |
 
 ### Association
