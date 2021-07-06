@@ -11,10 +11,10 @@
 
 ### Association
 
-- has_many :phototypes
+- has_many :prototypes
 - has_many :comments
 
-## Phototypesテーブル
+## Prototypesテーブル
 
 | Column     | Type         | Option                        |
 | ---------- | ------------ | ----------------------------- |
@@ -40,7 +40,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :phototype
+- belongs_to :prototype
 
 ## Usersテーブル
 
