@@ -41,3 +41,14 @@
 
 - belongs_to :user
 - belongs_to :phototype
+
+## Usersテーブル
+
+| Column     | Type         | Option      |
+| ---------- | ------------ |------------ |
+| email      | string       | null: false |
+| password   | string       | null: false |
+| name       | string       | null: false |
+| profile    | text         | null: false |
+| occupation | references   | null: false |
+| position   | references   | null: false |
