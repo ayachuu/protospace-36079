@@ -1,6 +1,6 @@
 class PrototypesController < ApplicationController
-  # 作成時、スペルミス
   def index
+    @prototype = Prototype.all
   end
   
   def new
