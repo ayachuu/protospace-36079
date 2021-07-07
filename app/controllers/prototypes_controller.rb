@@ -10,7 +10,7 @@ class PrototypesController < ApplicationController
   def create
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
-      redirect_to action: :index
+      redirect_to protorype_path
     else
       render :new
     end
@@ -21,11 +21,21 @@ class PrototypesController < ApplicationController
   end
 
   def edit
+    @prototype = Prototype.find(params[:id])
   end
 
   def update
+    @prototype = Prototype.find(params[:id])
+    @prototype.update(prototype_params)
+    if @prototype.save
+      redirect_to prototype_path
+    else
+      render :edit
+    end
   end
-  
+
+  def destroy
+  end
   private
 
   def prototype_params
