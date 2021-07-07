@@ -1,0 +1,28 @@
+class PrototypesController < ApplicationController
+  # 作成時、スペルミス
+  def index
+  end
+  
+  def new
+   @prototype = Prototype.new
+  end
+
+  def create
+    @prototype = Prototype.new(prototype_params)
+    if @prototype.save
+      redirect_to action: :index
+    else
+      render :new
+    end
+  end
+
+  
+
+
+
+  private
+
+  def prototype_params
+    params[:prototype].permit(:title, :catch_copy, :concept, :image).merge(user_id: current_user.id)
+  end
+end

@@ -4,6 +4,6 @@ class Prototype < ApplicationRecord
   validates :concept,    null: false
   validates :image,      presence: true
   
-  belongs_ to :user
+  has_many :users
   has_one_attached :image
 end
