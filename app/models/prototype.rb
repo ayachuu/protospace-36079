@@ -1,7 +1,7 @@
 class Prototype < ApplicationRecord
-  validates :title,      null: false
-  validates :catch_copy, null: false
-  validates :concept,    null: false
+  validates :title,      presence: true
+  validates :catch_copy, presence: true
+  validates :concept,    presence: true
   validates :image,      presence: true
   
   belongs_to :user
