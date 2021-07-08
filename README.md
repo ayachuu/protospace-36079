@@ -11,17 +11,17 @@
 
 ### Association
 
-- has_many :phototypes
+- has_many :prototypes
 - has_many :comments
 
-## Phototypesテーブル
+## Prototypesテーブル
 
 | Column     | Type         | Option                        |
 | ---------- | ------------ | ----------------------------- |
 | title      | string       | null: false                   |
 | catch_copy | text         | null: false                   |
 | concept    | text         | null: false                   |
-| image      |              |                               |
+| image      |              | presence: true                |
 | user       | references   | null: false,foreign_key: true |
 
 ### Association
@@ -40,7 +40,7 @@
 ### Association
 
 - belongs_to :user
-- belongs_to :phototype
+- belongs_to :prototype
 
 ## Usersテーブル
 
