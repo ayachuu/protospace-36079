@@ -1,4 +1,6 @@
 class PrototypesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @prototype = Prototype.all
   end
