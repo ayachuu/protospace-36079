@@ -10,7 +10,7 @@ class PrototypesController < ApplicationController
   def create
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
-      redirect_to protorype_path
+      redirect_to action: :index
     else
       render :new
     end
@@ -35,6 +35,10 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
+    @prototype = Prototype.find(params[:id])
+    @prototype.destroy
+    redirect_to prototypes_path
+
   end
   private
 
