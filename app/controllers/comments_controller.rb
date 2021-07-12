@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
    
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to "/prototypes/#{comment.prototype.id}"
+      redirect_to "/prototypes/#{@comment.prototype.id}"
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments
